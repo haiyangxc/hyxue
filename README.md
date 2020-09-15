@@ -1,2 +1,3 @@
-# yuchen1024.github.io
-This is my homepage. Thank Github for providing me such a nice place:-) 
+Home page of Haiyang XUE
+https://haiyangxc.github.io/hyxue.github.io/
+
