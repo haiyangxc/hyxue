@@ -1,0 +1,33 @@
+title = "Researcher"
+baseURL = "https://example.com"
+theme = "researcher"
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+enableEmoji = true
+
+[params]
+  author = "Olivier Roques"
+  description = "A simple monospaced resume theme for Hugo."
+  favicon = "favicon.ico"
+  [params.footer]
+    text = "By Olivier Roques"
+    url = "https://github.com/ojroques/hugo-researcher"
+
+[permalinks]
+  "/" = "/:filename"
+
+[menu]
+  [[menu.main]]
+    name = "About"
+    url = "/about"
+    weight = 1
+  [[menu.main]]
+    name = "Resume"
+    url = "/resume.pdf"
+    weight = 2
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact"
+    weight = 3
+
+[markup.goldmark.renderer]
+  unsafe = true  # allow raw HTML in markdown files
