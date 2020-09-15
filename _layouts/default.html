@@ -1,18 +1,31 @@
-<!DOCTYPE html>
-<html lang="en" >
-    <head>
-        <meta charset="utf-8">
-        <title>
-            {% if post.title %}{{ post.title }}
-                •
-            {% else %}
-            {% endif %}{{ site.title }}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Cutive+Mono">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
-    </head>
-    <body>
-        {{ content }}
-    </body>
+---
+layout: compress
+---
+
+{% include base_path %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0,2 }}" class="no-js">
+  <head>
+    {% include head.html %}
+    {% include head/custom.html %}
+  </head>
+
+  <body>
+
+    {% include browser-upgrade.html %}
+    {% include masthead.html %}
+
+    {{ content }}
+
+    <div class="page__footer">
+      <footer>
+        {% include footer/custom.html %}
+        {% include footer.html %}
+      </footer>
+    </div>
+
+    {% include scripts.html %}
+
+  </body>
 </html>
