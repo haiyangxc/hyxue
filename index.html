@@ -1,18 +1,25 @@
-<!--
- * @Author: whyisyoung
- * @Date: 2019-05-11 22:15:22
- * @LastEditors: whyisyoung
- * @LastEditTime: 2019-05-13 17:27:34
- -->
-<!DOCTYPE HTML>
-<html>
-
-<head>
-  <title>Haiyang Xue</title>
-  <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0; URL='https://haiyangxc.github.io/hyxue.github.io/'" />
-</head>
-
-<body>
-</body>
-</html>
+---
+layout: default
+---
+<main class="container">
+  <div class="row">
+    <div class="col-2">
+      <h1>{{ site.title }}</h1>
+      <p class="lead">
+          <br/>{{ site.desc }}
+      </p>
+      <article>
+        <h1>Posts</h1>
+      </article>
+      {% for post in paginator.posts %}
+      <article>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.excerpt }}</p>
+        <a href="{{ site.baseurl }}/{{ post.url }}">[ Read ]</a>
+      </article>
+      {% endfor %}
+      {% include buttons.html %}
+    </div>
+    {% include sidebar.html %}
+  </div>
+</main>
