@@ -1,0 +1,271 @@
+
+<html>
+<head>
+    <title>COMP6712 Advanced Security and Privacy</title>
+
+</head>
+
+
+<style>
+table {
+	border: 2px solid black;
+	border-collapse: collapse;
+
+}
+
+th, td {
+	border: 2px solid black;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+</style>
+
+
+<body style="background-color:rgba(50, 115, 220, 0.15);">
+
+
+<h1 style="text-align:center;">COMP6712 Advanced Security and Privacy <br> 2023/24 Semester 2 <br>  Department of Computing, PolyU </h1>
+		
+  
+<HR>
+
+
+
+<h2>General Information</h2>
+<ul>
+  <li>Venue: Y302</li>
+  <li>Time: Monday, 18:30-21:20, <a href="https://www.polyu.edu.hk/ar/docdrive/polyu-students/AC.pdf">week 1-13</a></li>
+  <li>Instructor: <a href="https://haiyangxc.github.io/hyxue/">Haiyang Xue</a>, haiyang.xue@polyu.edu.hk</li>
+    <li>TA:
+	<ul>
+		<li>xxx</li>
+		<li>xxx</li>
+	</ul>
+	</li>
+</ul>
+
+
+
+<h2>Outline</h2>
+
+This course will cover the most important features of security and privacy issues. The topics include network security, computer security and privacy-preserving computation (aka secure computation), and relevant
+knowledge in basic cryptography and advanced privacy-enhancing technologies. Two case studies of security and privacy in Blockchain are also included. Refer to the syllabus for details.
+  
+ 
+
+<h2>Updating Announcements</h2>
+
+
+<h2>Syllabus</h2>
+
+The syllabus [<a href="COMP6712-24/syllabus.pdf">pdf</a>] is subject to change, and I will continuously update it as the semester progresses. 
+ 
+<table style="width:90%">
+  <tr>
+    <th>Date</th>
+    <th>Topics\slides</th>
+    <th>Outline</th>
+	<th>Readings</th>
+	<th>Lecture notes</th>
+  </tr>
+ 
+	<tr>
+    <td width="10%">Week 1: Jan 15</td>
+    <td width="20%">Course Overview [<a href="COMP6712-24/Lecture_1_course_overview.pdf">slides</a>]</td>
+    <td width="25%">course plan, reading materials, grading, a brief introduction to every topic</td>
+	<td width="35%">
+	[Sta] William Stallings, Cryptography and Network Security: Principles and Practice<br>
+	[Du] Wenliang Du, Computer Security: A Hands-on Approach<br>
+	[KPS] Charlie Kaufman, Radia Perlman, and Mike Speciner, Network Security: Private Communication in a Public World<br>
+	[KL] Jonathan Katz, and Yehuda Lindell, Introduction to Modern Cryptography </br>
+	</td>
+    <td width="10%"></td>
+  </tr>
+
+ <tr>
+    <td width="10%">Week 2: Jan 22</td>
+    <td width="20%">Basic Cryptography 1: Symmetric-key cryptography [<a href="COMP6712-24/Lecture_2_symmetric_key_cryptography.pdf">slides</a>]</td>
+    <td width="25%">symmetric encryption, one-time pad, blockcipher, hash function, MAC, authenticated encryption.</td>
+	<td width="35%">
+	[KL] Section 2-7 <br>
+	[Std] Chapter 3, 5, 6, 7, 11, 12 <br>
+	Goldreich, Foundation of Cryptography II, Section 5.3.1, 5.3.2, 5.3.3, 5.4.3.</br>
+	</td>
+    <td width="10%">
+		<a href="COMP6712-24/Lecture2.pdf">Lecture 2</a> by Haiyang Xue<br>
+		<a href="COMP6712-24/template.zip">Source code</a>
+	</td>
+  </tr>
+  <tr>
+    <td width="10%">Week 3: Jan 29</td>
+    <td width="20%">Basic Cryptography 2: Public-key cryptography [<a href="COMP6712-24/Lecture_3_public_key_cryptography.pdf">slides</a>]</td>
+    <td width="25%">Diffie-Hellman, public key encryption, RSA, Digital signature</td>
+	<td width="35%">[KL] Section 8, 10,11, 12.1-12.5
+	</td>
+    <td width="10%">
+	
+	</td>
+  </tr>
+  
+  <tr>
+    <td width="10%">Week 4: Feb 5</td>
+    <td width="20%">Network Security Principles [<a href="COMP6712-24/Lecture_4_Network_security_principle.pdf">slides</a>]</td>
+    <td width="25%">authenticated key exchange, PKI, and certification authorities</td>
+	<td width="35%">[KL] Section 12.7<br>
+	Dan Boneh and Victor Shoup, <a href="http://toc.cryptobook.us/">A Graduate Course in Applied Cryptography</a>, Section 22<br>
+	[Du] Section 24</td>
+    <td width="10%">
+  </tr>
+  
+ <tr>
+    <td width="10%">Week 5: Feb 19</td>
+    <td width="20%">Network Security in Practice  [<a href="COMP6712-24/Lecture_5_Network_security_in_practice.pdf">slides</a>]</td>
+    <td width="25%">secure sockets layer (SSL), transport layer security (TLS), HTTPS</td>
+	<td width="35%">[Sta] Section 16<br>
+	[KPS] Section 13<br>
+	RFC 2246, 5246, 8446
+	</td>
+    <td width="10%">
+  </tr>
+  
+ <tr>
+    <td width="10%">Week 6: Feb 26</td>
+    <td width="20%">Authentication [<a href="COMP6712-24/Lecture_6_Authentication.pdf">slides</a>]</td>
+    <td width="25%">access control, password authentication, biometric authentication, public key authentication</td>	
+	<td width="35%">Dan Boneh and Victor Shoup, <a href="http://toc.cryptobook.us/">A Graduate Course in Applied Cryptography</a>, Section 18<br>
+	<a href="https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html">Authentication Cheat Sheet</a><br>
+	<a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1634356">An Administrator’s Guide to Internet Password Research</a><br>
+	<a href="https://www.usenix.org/system/files/conference/lisa14/lisa14-paper-florencio.pdf"> Biometrics: A Tool for Information Security</a><br>
+  <a href="https://www.ssh.com/academy/ssh">SSH.com</a><br>
+  RFC 4251, 4252<br>
+	[KPS] Section 13.8
+	</td>
+    <td width="10%">
+  </tr>
+  
+ <tr>
+    <td width="10%">Week 7: Mar 4</td>
+    <td width="20%">Privacy-Enhancing Technologies 1 <br> [<a href="COMP6712-24/Lecture_7_PET1.pdf">slides</a>]</td>
+    <td width="25%">post-quantum cryptography and fully-homomorphic encryption</td>
+	<td width="35%">
+	<a href="https://csrc.nist.gov/projects/post-quantum-cryptography">Post-quantum Cryptography</a> by NIST<br>
+	<a href="https://ieeexplore.ieee.org/document/9935575">Cryptographic Standards in the Post-Quantum Era</a><br>
+	<a href="https://github.com/jonaschn/awesome-he">Awesome Homomorphic Encryption</a> in Github<br>
+	<a href="https://homomorphicencryption.org/">Homomorphic Encryption Standardization</a><br>
+	</td>
+    <td width="10%">
+  </tr>
+  
+  <tr>
+    <td width="10%">Week 8: Mar 11</td>
+    <td width="20%">Privacy-Enhancing Technologies 2 <br> [<a href="COMP6712-24/Lecture_8_PET2.pdf">slides</a>]</td>
+    <td width="25%">zero-knowledge proofs</td>
+	<td width="35%">Dan Boneh and Victor Shoup, <a href="http://toc.cryptobook.us/">A Graduate Course in Applied Cryptography</a>, Section 19, 20<br>
+	Berry Schoenmakers, <a href="https://www.win.tue.nl/~berry/CryptographicProtocols/LectureNotes.pdf">Lecture Notes Cryptographic Protocols</a>, Section 4, 5<br>
+	<a href="https://github.com/matter-labs/awesome-zero-knowledge-proofs">awesome-zero-knowledge-proofs</a>
+	</td>
+    <td width="10%">
+      
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="10%">Week 9: Mar 18</td>
+    <td width="20%">Privacy-Enhancing Technologies 3 <br> [<a href="COMP6712-24/Lecture_9_PET3.pdf">slides</a>]</td>
+    <td width="25%">secure multiparty computation </td>
+	<td width="35%">
+	David Evans, Vladimir Kolesnikov and Mike Rosulek, <a href="https://securecomputation.org/">A Pragmatic Introduction to
+Secure Multi-Party Computation</a>, Section 1, 2, 3<br>
+	Dan Boneh and Victor Shoup, <a href="http://toc.cryptobook.us/">A Graduate Course in Applied Cryptography</a>, Section 23<br>
+	Lindell, <a href="https://u.cs.biu.ac.il/~lindell/MPC-resources.html">Resources for Getting Started with MPC</a><br>
+	
+	</td>
+    
+  </tr>
+      
+  <tr>
+    <td width="10%">Week 10: Mar 25</td>
+    <td width="20%">Guest Lecture: Blockchain</td>
+    <td width="25%">security and privacy in Blockchain</td>
+	<td width="35%">
+	<a href="https://bitcoin.org/bitcoin.pdf">Blockchain whitepaper</a><br>
+	<a href="https://www.blockchain.com/">blockchain.com</a>
+	</td>
+    <td width="10%"></td>
+  </tr>
+      
+  <tr>
+    <td width="10%">Week 11: Apr 1</td>
+    <td width="20%"> Easter Holiday</td>
+    <td width="25%"></td>
+	<td width="35%"></td>
+    <td width="10%"></td>
+  </tr>
+
+  <tr>
+    <td width="10%">Week 12: Apr 8</td>
+    <td width="20%">Final presentation 1</td>
+    <td width="25%"> papers from S&P, CCS, USENIX, NDSS, CRYPTO, or EUROCRYPT </td>
+	<td width="35%"></td>
+    <td width="10%"></td>
+  </tr>
+
+  <tr>
+    <td width="10%">Week 13: Apr 15</td>
+    <td width="20%">Final presentation 2</td>
+    <td width="25%">papers from S&P, CCS, USENIX, NDSS, CRYPTO, or EUROCRYPT </td>
+	<td width="35%"></td>
+    <td width="10%"></td>
+  </tr>
+  
+  
+  
+</table>
+
+
+<h2>Grading</h2>
+
+It will be based on two assignments (20%), projects (45%), and a final exam (35%).
+
+<br>
+<strong>Assignments</strong>
+
+
+
+<br>
+<strong>Projects</strong>: final presentation and lecture notes. All submissions will be made public.
+<ul>
+
+	<li>Choose any paper you are interested in from IEEE S&P 18-22, ACM CCS 18-22, USENIX 18-22, NDSS 18-22, CRYPTO 18-22, or EUROCRYPT 18-22, and give a 20-minute presentation. 
+		<ul>
+		<li>Send your choice to the TA\Instructor on or before Mar 27. </li>
+		<li>I will post Presentation Schedule here on Mar 28. If necessary, you can discuss your presentation with the instructor in advance.</li>
+		<li>Reference: <a href="https://www.sfu.ca/~jeffpell/Ling480/ParberryMembrane.pdf">How to Present a Paper</a>, <a href="http://dps.uibk.ac.at/~tf/lehre/ResearchPresentation">How to Give a Technical Presentation</a></li>
+		</ul>
+	</li>
+
+	<li>Every 2~3 students, as a team, should choose one lecture from week 3 to week 9 and write lecture notes. All submissions will be made public.
+		<ul>
+		<li>Guidelines for writing lecture notes can be found <a href="COMP6712-24/guidelines.pdf">here</a>.</li>
+		<li>I will give an example for week 2. I will also provide readings as a reference.</li>
+		<li>Lecture notes for week x should be submitted to TA and me on or before the end of week x+6, where x belongs to {3, 4, 5, 6, 7, 8, 9}. </li>
+		<li>Comments will be given and revision may be required.</li>
+		</ul>
+	</li>
+
+</ul>
+
+<strong>Final exam</strong>: I will give a Summary of what you should know about the final.
+
+
+
+
+<h2>Enjoy!</h2>
+
+
+</body>
+</html>
