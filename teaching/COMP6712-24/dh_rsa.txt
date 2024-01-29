@@ -90,3 +90,45 @@ print('Did decryption succeed? ',Mprime==M)
 
 
 
+
+
+
+###### secp256k1 based Diffie-Hellman
+p256 = 2^256-2^32-977
+a256 = 0
+b256 = 7
+
+## Base point
+gx= 55066263022277343669578718895168534326250603453777594175500187360389116729240L
+gy= 32670510020758816978083085130507043184471273380659243275938904335757337482424L
+
+## Curve order
+n = 115792089237316195423570985008687907852837564279074904382605163141518161494337L
+FF = GF(p256)
+EC = EllipticCurve([FF(a256), FF(b256)])
+EC.set_order(n)
+
+## Base point
+G = EC(FF(gx), FF(gy))
+
+## Alice's private key
+a = 4
+## Alice's public key
+A = a*G
+print (A)
+
+## Bob's private key
+b = 7
+## Bob's public key
+B = b*G
+print (B)
+
+## Alice's final DH key
+AB = a*B
+print (AB)
+
+## Bob's final DH key
+BA = b*A
+print (BA)
+
+
