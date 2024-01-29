@@ -56,14 +56,19 @@ n_bits = 2048
 p = random_prime(2^(n_bits/2))
 q = random_prime(2^(n_bits/2))
 N = p*q
+PhiN = (p-1)*(q-1)
+
+
 e = 2^16+1
 print('Public key is')
 print('N =',N)
 print('e =',e)
 
+
 print('Secret key is')
-d = lift(mod(e,(p-1)*(q-1))^(-1))
-print
+d = lift(mod(e, PhiN)^(-1))
+print('PhiN =',PhiN)
+
 print('d =',d)
 
 Zp=Integers(N)# calculate over Zp
@@ -74,12 +79,12 @@ Zp=Integers(N)# calculate over Zp
 M = mod(randint(1,N-1),N)
 #M=Zp(2)
 C = M^e
-print('M =',M)
-print('C =',C)
+print('Message =',M)
+print('Ciphertext =',C)
 
 ####### Textbook RSA Dec ###########
 Mprime = C^d
-print('M\' =',Mprime)
+print('Message\' =',Mprime)
 print('Did decryption succeed? ',Mprime==M)
 
 
