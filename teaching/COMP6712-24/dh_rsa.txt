@@ -135,3 +135,120 @@ BA = b*A
 print (BA)
 
 
+
+
+
+
+
+
+
+
+###### secp256k1 based ECDSA Digital signature ############
+
+## required hash lib
+import hashlib
+
+def hashit(msg):  
+  return Integer('0x' + hashlib.sha256(msg.encode()).hexdigest())
+
+
+## pub parameters
+
+p256 = 2^256-2^32-977
+a256 = 0
+b256 = 7
+
+## Base point
+gx= 55066263022277343669578718895168534326250603453777594175500187360389116729240L
+gy= 32670510020758816978083085130507043184471273380659243275938904335757337482424L
+
+## Curve order
+n = 115792089237316195423570985008687907852837564279074904382605163141518161494337L
+FF = GF(p256)
+
+## EC y^2=x^3+7(mod p256)
+
+EC = EllipticCurve([FF(a256), FF(b256)])
+EC.set_order(n)
+
+## Base point
+G = EC(FF(gx), FF(gy))
+
+##Define Key generation 
+
+def keygen():
+  d = randint(1, n - 1)
+  Q = d * G
+  return (Q, d)
+
+##Define Signature algorithm
+
+def ecdsa_sign(d, m):
+  r = 0
+  s = 0
+  while s == 0:
+    k = 1
+    while r == 0:
+      k = randint(1, n - 1)
+      Q = k * G
+      (x1, y1) = Q.xy()
+      r = FF(x1)
+    e = hashit(m)
+    s = FF(k) ^ (-1) * (e + d * r)
+  return [r, s]
+
+##Define Verification algorithm
+
+def ecdsa_verify(Q, m, r, s):
+  e = hashit(m)
+  w = s ^ (-1)
+  u1 = (e * w)
+  u2 = (r * w)
+  P1 = Integer(u1) * G
+  P2 = Integer(u2) * Q
+  X = P1 + P2
+  (x, y) = X.xy()
+  v = FF(x)
+  return v == r
+
+
+
+########Test the ECDSA signature of 'My Message COMP6712'
+
+(Q, d) = keygen()
+m = 'My Message COMP6712'
+
+[r, s] = ecdsa_sign(d, m)
+result = ecdsa_verify(Q, m, r, s)
+
+print (f"Message: {m}")
+print (f"Public Key: {Q.xy()}")
+print (f"Private Key: {d}")
+
+print ("=== Signature ===")
+print (f" r = {r}")
+print (f" s = {s}")
+print (f"Verification: {result}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
