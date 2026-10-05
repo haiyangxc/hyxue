@@ -1,30 +1,69 @@
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Haiyang Xue</title>
 
+    <style>
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+        }
+
+        /* Quick-jump bar: sits under the header and stays at the top while scrolling */
+        .topnav {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #F4ECF7;
+            border-top: 1px solid #C9B3D6;
+            border-bottom: 1px solid #C9B3D6;
+            margin: 12px 0;
+            padding: 8px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 28px;
+        }
+        .topnav a {
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .topnav a:hover,
+        .topnav a:focus { text-decoration: underline; }
+
+        /* After a jump, keep the section heading clear of the sticky bar */
+        h2[id] { scroll-margin-top: 56px; }
+
+        /* Publications grouped by year (click a year to expand / collapse) */
+        details.pub-year { margin: 0.6em 0; }
+        details.pub-year > summary {
+            cursor: pointer;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 4px 0;
+        }
+        details.pub-year > summary:hover { color: #6C3483; }
+        details.pub-year > ul > li { margin-bottom: 1em; }
+    </style>
 </head>
 
 
 <body style="background-color:#F4ECF7;">
-    
-  
+
+
   <div class="swidth" style="max-width: 100%; width: 100%; padding-right: 5%; padding-left: 5%; box-sizing: border-box;">
-    
+
   <table width="100%"><tr>
 	<td><img src="image/haiyang.jpg" class="round_icon" alt="" height="200" width="160" ></td>
-    
+
 	<td>&nbsp;&nbsp;&nbsp;</td>
 	<td>
+    <h2>Haiyang Xue (薛海洋)</h2>
     <p>
-        <h2>Haiyang Xue (薛海洋)</h2>
-		I am an assistant professor of computer science at School of Computing and Information Systems, Singapore Management University. <br>
-
+		I am an assistant professor of computer science at School of Computing and Information Systems, Singapore Management University.
     </p>
 
 
@@ -34,15 +73,22 @@
     </p>
 
     <p>
-	    [<a href="https://dblp.org/pid/137/5280.html">DBLP</a>,  
+	    [<a href="https://dblp.org/pid/137/5280.html">DBLP</a>,
 		<a href="https://scholar.google.com/citations?user=C5kU67QAAAAJ">Google Scholar</a>]<br>
     </p>
     </td>
-    
+
     </tr></table>
 
 
-<HR>  
+<!-- Quick-jump links -->
+<nav class="topnav">
+  <a href="#publications">Publications</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#team">Team</a>
+  <a href="#services">Services</a>
+</nav>
+
 Positions for <a href="https://computing.smu.edu.sg/phd/online-application">PhD candidate</a>, <s>post-doc, research assistant,</s> and visiting students, are available. If you are interested in cryptography, please drop me an email.
 
 <HR>
@@ -59,89 +105,80 @@ Positions for <a href="https://computing.smu.edu.sg/phd/online-application">PhD 
 
 
 <HR>
-<h2>Selected Publications</h2>
+<h2 id="publications">Selected Publications</h2>
 
+<!--
+  Each year is a <details> block.
+  "open" = expanded by default; remove "open" to collapse it by default.
+-->
 
+<!-- ===================== 2027 (expanded) ===================== -->
+<details class="pub-year" open>
+<summary>2027</summary>
 <ul>
   <li><strong>DAWN': Improved DAWN and Accelerated Implementation on ARM Cortex-M4</strong>
     <ul>
       <li><em>Junhao Huang, Yijian Liu, Yu Zhang, Xianhui Lu, Donglong Chen, Haiyang Xue</em></li>
-      <li> TCHES 2027 </li>
+      <li>TCHES 2027</li>
     </ul>
   </li>
-</ul>
 
-
-<ul>
   <li><strong>SoK: Threshold ECDSA from Theory to Practice</strong>
     <ul>
       <li><em>Bowen Jiang, Guofeng Tang, Chengru Zhang, Haiyang Xue</em></li>
-      <li> IEEE S&P 2027 </li>
+      <li>IEEE S&amp;P 2027</li>
     </ul>
   </li>
-</ul>
 
-
-<ul>
   <li><strong>Vespa: Efficient Secure Aggregation with Integrity Defense under Server Privacy</strong>
     <ul>
       <li><em>Jia Hu, Hongwei Li, Meng Hao, Hanxiao Chen, Pengzhi Xing, Wenbo Jiang, Dongxiao Liu, Haiyang Xue, Robert H. Deng</em></li>
-      <li> NDSS 2027 [<a href="https://eprint.iacr.org/2026/2183">eprint</a>]</li>
+      <li>NDSS 2027 [<a href="https://eprint.iacr.org/2026/2183">eprint</a>]</li>
     </ul>
   </li>
 </ul>
+</details>
 
 
-
+<!-- ===================== 2026 (expanded) ===================== -->
+<details class="pub-year" open>
+<summary>2026</summary>
 <ul>
-  <li><strong>Efficient and Compact High-order Masking Raccoon on Memory
-  Constrained Devices</strong>
+  <li><strong>Efficient and Compact High-order Masking Raccoon on Memory Constrained Devices</strong>
     <ul>
       <li><em>Junhao Huang, Yiteng Sun, Jipeng Zhang, Weijia Wang, Donglong Chen, Haiyang Xue, Guomin Yang</em></li>
-      <li>TCHES 2026 </li>
+      <li>TCHES 2026</li>
     </ul>
   </li>
-</ul>
 
-<ul>
   <li><strong>Towards Scalable Fuzzy PSI via Efficient Fuzzy Matching</strong>
     <ul>
       <li><em>Meng Hao, Xinpeng Yang, Hanxiao Chen, Tianwei Zhang, Haiyang Xue, Guomin Yang, Hongwei Li, Robert H. Deng</em></li>
       <li>ACM CCS 2026 [<a href="https://arxiv.org/abs/2608.11526">link</a>]</li>
     </ul>
   </li>
-</ul>
 
-<ul>
   <li><strong>Enhanced Private Set Union from Secret-shared Private Membership Test</strong>
     <ul>
       <li><em>Meng Hao, Guodong Wang, Xinpeng Yang, Pengzhi Xing, Hanxiao Chen, Tianwei Zhang, Haiyang Xue, Guomin Yang, Hongwei Li, Robert H. Deng</em></li>
       <li>USENIX Security 2026 [<a href="https://www.usenix.org/system/files/usenixsecurity26-hao.pdf">link</a>]</li>
     </ul>
   </li>
-</ul>
 
-<ul>
   <li><strong>Robot: Robust Threshold BBS+ in Two Rounds</strong>
     <ul>
       <li><em>Guofeng Tang, Tian Qiu, Bowen Jiang, Haiyang Xue, Guomin Yang, Man Ho Au, Robert H. Deng, Kowk-Yan Lam</em></li>
-      <li>IEEE S&P 2026 [<a href="https://eprint.iacr.org/2026/651">eprint</a>]</li>
+      <li>IEEE S&amp;P 2026 [<a href="https://eprint.iacr.org/2026/651">eprint</a>]</li>
     </ul>
   </li>
-</ul>
 
-
-<ul>
   <li><strong>Efficient Construction of Threshold BBS+ Signatures and its Extensions</strong>
     <ul>
       <li><em>Yang Heng, Mengling Liu, Xingye Lu, Haiyang Xue, Zijian Bao, Man Ho Au</em></li>
       <li>PKC 2026 [<a href="https://eprint.iacr.org/2026/787">eprint</a>]</li>
     </ul>
   </li>
-</ul>
 
-
-<ul>
   <li><strong>Scalable Two-Round n-out-of-n and Multi-Signatures from Lattices in the Quantum Random Oracle Model</strong>
     <ul>
       <li><em>Qiqi Lai, Feng-Hao Liu, Yang Lu, Haiyang Xue, Yong Yu, Yuan Chen</em></li>
@@ -149,7 +186,12 @@ Positions for <a href="https://computing.smu.edu.sg/phd/online-application">PhD 
     </ul>
   </li>
 </ul>
+</details>
 
+
+<!-- ===================== 2025 (expanded) ===================== -->
+<details class="pub-year" open>
+<summary>2025</summary>
 <ul>
   <li><strong>Improved Secure Two-party Computation from a Geometric Perspective</strong>
     <ul>
@@ -157,29 +199,21 @@ Positions for <a href="https://computing.smu.edu.sg/phd/online-application">PhD 
       <li>USENIX Security 2025 [<a href="https://eprint.iacr.org/2025/200">eprint</a>]</li>
     </ul>
   </li>
-</ul>
 
-<ul>
   <li><strong>Achilles: A Formal Framework of Leaking Secrets from Signature Schemes via Rowhammer</strong>
     <ul>
       <li><em>Junkai Liang, Zhi Zhang, Xin Zhang, Qingni Shen, Yansong Gao, Xingliang Yuan, Haiyang Xue, Pengfei Wu, Zhonghai Wu</em></li>
       <li>USENIX Security 2025, Honorable Mentions [<a href="https://www.usenix.org/conference/usenixsecurity25/presentation/liang-achilles">link</a>]</li>
     </ul>
   </li>
-</ul>
 
-
-
-<ul>
   <li><strong>Robust Threshold ECDSA with Online-Friendly Design in Three Rounds</strong>
     <ul>
       <li><em>Guofeng Tang, Haiyang Xue</em></li>
-      <li>IEEE S&P 2025 [<a href="https://eprint.iacr.org/2025/910">eprint</a>]</li>
+      <li>IEEE S&amp;P 2025 [<a href="https://eprint.iacr.org/2025/910">eprint</a>]</li>
     </ul>
   </li>
-</ul>
 
-<ul>
   <li><strong>Fully Selective Opening Secure IBE from LWE</strong>
     <ul>
       <li><em>Dingding Jia, Haiyang Xue, Bao Li</em></li>
@@ -187,9 +221,12 @@ Positions for <a href="https://computing.smu.edu.sg/phd/online-application">PhD 
     </ul>
   </li>
 </ul>
+</details>
 
 
-
+<!-- ===================== 2024 (collapsed) ===================== -->
+<details class="pub-year">
+<summary>2024</summary>
 <ul>
   <li><strong>Direct Range Proofs for Paillier Cryptosystem and Their Applications</strong>
     <ul>
@@ -197,124 +234,96 @@ Positions for <a href="https://computing.smu.edu.sg/phd/online-application">PhD 
       <li>ACM CCS 2024 [<a href="https://eprint.iacr.org/2024/1355">eprint</a>]</li>
     </ul>
   </li>
-</ul>
 
-
-
-<ul>
   <li><strong>Efficient Zero-Knowledge Arguments For Paillier Cryptosystem</strong>
     <ul>
       <li><em>Borui Gong, Wang Fat Lau, Man Ho Au, Rupeng Yang, Haiyang Xue, Lichun Li</em></li>
-      <li>IEEE S&P 2024 [<a href="https://eprint.iacr.org/2024/1303">eprint</a>]</li>
+      <li>IEEE S&amp;P 2024 [<a href="https://eprint.iacr.org/2024/1303">eprint</a>]</li>
     </ul>
   </li>
 </ul>
+</details>
 
 
+<!-- ================= 2023 and earlier (collapsed) ================= -->
+<details class="pub-year">
+<summary>2023 and Earlier</summary>
 <ul>
   <li><strong>Efficient Multiplicative-to-Additive Function from Joye-Libert Cryptosystem and Its Application to Threshold ECDSA</strong>
     <ul>
-      <li><em>Haiyang Xue, Man Ho Au, Mengling Liu, Kwan Yin Chan, Handong Cui, Xiang Xie, Tsz Hon Yuen, Chengru Zhang </em></li>
+      <li><em>Haiyang Xue, Man Ho Au, Mengling Liu, Kwan Yin Chan, Handong Cui, Xiang Xie, Tsz Hon Yuen, Chengru Zhang</em></li>
       <li>ACM CCS 2023 [<a href="https://eprint.iacr.org/2023/1312">eprint</a>]</li>
     </ul>
   </li>
-</ul>
 
-
-<ul>
   <li><strong>Efficient Online-friendly Two-Party ECDSA Signature</strong>
     <ul>
-      <li><em>Haiyang Xue, Man Ho Au, Xiang Xie, Tsz Hon Yuen, Handong Cui </em></li>
+      <li><em>Haiyang Xue, Man Ho Au, Xiang Xie, Tsz Hon Yuen, Handong Cui</em></li>
       <li>ACM CCS 2021 [<a href="https://eprint.iacr.org/2022/318">eprint</a>]. <a href="https://github.com/winderica/kryptology">Code in Go by Chengru Zhang and Mengling Liu</a>.</li>
     </ul>
   </li>
-</ul>
-	
 
-<ul>
   <li><strong>Compact Authenticated Key Exchange in the Quantum Random Oracle Model</strong>
     <ul>
-      <li><em>Haiyang Xue, Man Ho Au, Rupeng Yang, Bei Liang, Haodong Jiang </em></li>
+      <li><em>Haiyang Xue, Man Ho Au, Rupeng Yang, Bei Liang, Haodong Jiang</em></li>
       <li>ePrint 2020/1282 [<a href="https://eprint.iacr.org/2020/1282">eprint</a>]</li>
     </ul>
   </li>
-</ul>
 
-
-
-<ul>
   <li><strong>Strongly Secure Authenticated Key Exchange from Supersingular Isogenies</strong>
     <ul>
-      <li><em>Xiu Xu, Haiyang Xue, Kunpeng Wang, Man Ho Au, Song Tian </em></li>
+      <li><em>Xiu Xu, Haiyang Xue, Kunpeng Wang, Man Ho Au, Song Tian</em></li>
       <li>ASIACRYPT 2019 [<a href="https://eprint.iacr.org/2018/760">eprint</a>]</li>
     </ul>
   </li>
-</ul>
 
-
-
-<ul>
   <li><strong>Understanding and Constructing AKE via Double-key Key Encapsulation Mechanism</strong>
     <ul>
-      <li><em>Haiyang Xue, Xianhui Lu, Bao Li, Bei Liang, Jingnan He </em></li>
+      <li><em>Haiyang Xue, Xianhui Lu, Bao Li, Bei Liang, Jingnan He</em></li>
       <li>ASIACRYPT 2018 [<a href="https://eprint.iacr.org/2018/817">eprint</a>]</li>
     </ul>
   </li>
-</ul>
 
-
-	
-	
-<ul>
   <li><strong>LAC: Lattice-based Cryptosystem</strong>
     <ul>
       <li><em>Xianhui Lu, Yamin Liu, Dingding Jia, Haiyang Xue, Jingnan He, Zhenfei Zhang, Zhe Liu, Hao Yang, Bao Li, Kunpeng Wang</em></li>
-      <li><a href="https://eprint.iacr.org/2018/1009">eprint</a>. <a href="https://github.com/zhenfeizhang/LAC">Code</a>. <a href="slides/LAC-April2018.pdf">Slides</a>. <a href="slides/lac-zhang.pdf">Update Slides</a>
-	  <li><a href="https://csrc.nist.gov/Projects/post-quantum-cryptography/round-2-submissions">2nd round</a>, NIST post-quantum cryptography standardization process.</li>
+      <li><a href="https://eprint.iacr.org/2018/1009">eprint</a>. <a href="https://github.com/zhenfeizhang/LAC">Code</a>. <a href="slides/LAC-April2018.pdf">Slides</a>. <a href="slides/lac-zhang.pdf">Update Slides</a></li>
+      <li><a href="https://csrc.nist.gov/Projects/post-quantum-cryptography/round-2-submissions">2nd round</a>, NIST post-quantum cryptography standardization process.</li>
       <li>First prize in the <a href="https://www.cacrnet.org.cn/site/content/854.html">Chinese post-quantum cryptography competition</a>.</li>
-      
     </ul>
   </li>
-</ul>
 
-
-<ul>
   <li><strong>SIAKE: Supersingular Isogeny-based AKE</strong>
     <ul>
       <li><em>Haiyang Xue, Xianhui Lu, Kunpeng Wang, Song Tian, Xiu Xu, Jingnan He, Bao Li</em></li>
       <li>Second prize in the Chinese post-quantum cryptography competition.</li>
     </ul>
   </li>
-</ul>
 
-
-<ul>
   <li><strong>Preprocess-then-NTT Technique and Its Applications to Kyber and NewHope</strong>
     <ul>
-      <li><em>Shuai Zhou, Haiyang Xue, Daode Zhang, Kunpeng Wang, Xianhui Lu, Bao Li, Jingnan He </em></li>
+      <li><em>Shuai Zhou, Haiyang Xue, Daode Zhang, Kunpeng Wang, Xianhui Lu, Bao Li, Jingnan He</em></li>
       <li>Inscrypt 2018 [<a href="https://eprint.iacr.org/2018/995">eprint</a>]. <a href="https://github.com/haiyangxc/Preprocess_Then_NTT">Code</a></li>
     </ul>
   </li>
-</ul>
-	
 
-<ul>
   <li><strong>Regularly Lossy Functions and Applications</strong>
     <ul>
-      <li><em>Yu Chen, Baodong Qin, Haiyang Xue </em></li>
+      <li><em>Yu Chen, Baodong Qin, Haiyang Xue</em></li>
       <li>CT-RSA 2018 [<a href="paper-doc/CQX18.pdf">Full paper</a>]</li>
     </ul>
   </li>
 </ul>
+</details>
 
 
 <HR>
-<h2><a href="teaching/teaching.html">Teaching</a></h2>
+<h2 id="teaching"><a href="teaching/teaching.html">Teaching</a></h2>
 
 <ul>
   <li> @SMU
     <ul>
-      <li>COR-IS1704 Comp Thinking & Programming, 2025/26 Term 1, 2026/27 Term 1</li>
+      <li>COR-IS1704 Comp Thinking &amp; Programming, 2025/26 Term 1, 2026/27 Term 1</li>
     </ul>
     <ul>
       <li>CS440 Foundation of Cybersecurity, 2024/25 Term 2, 2025/26 Term 2</li>
@@ -331,7 +340,7 @@ Positions for <a href="https://computing.smu.edu.sg/phd/online-application">PhD 
 
 
 <HR>
-<h2>Team </h2>
+<h2 id="team">Team</h2>
 
 <ul>
   <li>@SMU
@@ -343,9 +352,9 @@ Positions for <a href="https://computing.smu.edu.sg/phd/online-application">PhD 
       <li>Yingying Li, visitor (HZNU), Feb 2026 - </li>
       <li><a href="https://junhaohuang.github.io/">Junhao Huang</a>, post-doc, Jan 2026 - </li>
       <li><a href="https://qinchengyi1.github.io/">Chengyi Qin</a>, visiting student (SDU), Sep 2025 - Sep 2026</li>
-	  	<li>Yunyan Zou, visiting student (SDU), Sep 2025 - Aug 2026</li>
-		  <li>Xiaofei Wu, visiting student (ECNU), Sep 2025 - Feb 2026</li>
-	  	<li>Jia Hu, visiting student (UESTC), Sep 2025 - Aug 2026</li>
+      <li>Yunyan Zou, visiting student (SDU), Sep 2025 - Aug 2026</li>
+      <li>Xiaofei Wu, visiting student (ECNU), Sep 2025 - Feb 2026</li>
+      <li>Jia Hu, visiting student (UESTC), Sep 2025 - Aug 2026</li>
       <li>Dingding Jia, visitor (IIE, CSA), Aug 2025</li>
       <li>Jingnan He, visitor (IIE, CSA), Jul 2025</li>
       <li><a href="https://qsang.cc">Bowen Jiang</a>, PhD, Jan 2025 - </li>
@@ -365,7 +374,7 @@ Positions for <a href="https://computing.smu.edu.sg/phd/online-application">PhD 
 </ul>
 
 <HR>
-<h2>Services</h2>
+<h2 id="services">Services</h2>
 
 <ul>
 <li>Chair
@@ -383,9 +392,9 @@ Positions for <a href="https://computing.smu.edu.sg/phd/online-application">PhD 
     <li>Inscrypt 2023, 2024, 2025, 2026</li>
     <li>ACISP 2027</li>
     <li>ProvSec 2020, 2021, 2022, 2023, 2024, 2025, 2026</li>
-		<li>ISPEC 2023, 2024, 2026</li>
-		<li>EISA, 2023, 2024, 2025</li>
-		<li>AIBlock 2024, 2025, 2026</li>
+    <li>ISPEC 2023, 2024, 2026</li>
+    <li>EISA, 2023, 2024, 2025</li>
+    <li>AIBlock 2024, 2025, 2026</li>
 	</ul>
 </li>
 </ul>
@@ -408,7 +417,7 @@ Positions for <a href="https://computing.smu.edu.sg/phd/online-application">PhD 
   <li>Outstanding Graduate, SDU, 2013</li>
 </ul>
 
-
+  </div>
 
 </body>
 </html>
